@@ -1,6 +1,0 @@
----
-more:
-  - name: "View Source"
-    ref: "https://github.com/php-kafka/php-kafka.github.io"
-    external: true
-    icon: "github"
