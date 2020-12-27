@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  hugo:
+    image: klakegg/hugo:latest
+    container_name: hugo
+    hostname: hugo
+    volumes:
+      - ./:/src
