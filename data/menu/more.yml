@@ -1,12 +1,5 @@
 ---
 more:
-  - name: What's new
-    ref: "/whats-new"
-    icon: "notification"
-  - name: Releases
-    ref: "https://github.com/thegeeklab/hugo-geekdoc/releases"
-    external: true
-    icon: "download"
   - name: "View Source"
     ref: "https://github.com/php-kafka/php-kafka.github.io"
     external: true

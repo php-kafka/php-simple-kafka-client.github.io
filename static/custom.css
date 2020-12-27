@@ -1,2 +1,17 @@
+/* default link color */
+a { color: #e500ff; }
+a:visited { color: #e500ff }
+
+/* site header */
 .gdoc-header { background: #ffffff; border-color: #404040; }
 .gdoc-header__link, .gdoc-header__link:visited { color: #e500ff; }
+
+/* page links */
+.gdoc-page__footer a, .gdoc-page__footer a:visited { color: #e500ff; }
+.gdoc-page__header a, .gdoc-page__header a:visited { color: #e500ff; }
+
+
+/* site footer */
+.gdoc-footer { background: #ffffff; color: gray; }
+.gdoc-footer__link{ color: #e500ff; }
+.gdoc-footer__link:visited, .gdoc-footer__link:hover { color: #e500ff; }
