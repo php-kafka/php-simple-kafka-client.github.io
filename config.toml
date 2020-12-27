@@ -12,5 +12,5 @@ disablePathToLower = true
     geekdocLogo = "images/logo.jpg"
     geekdocBreadcrumb = false
     geekdocRepo = "https://github.com/php-kafka/php-kafka.github.io"
-    geekdocEditPath = "content"
-
+    geekdocEditPath = "tree/main/content"
+    geekdocSearch = false

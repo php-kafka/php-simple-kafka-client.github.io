@@ -1,7 +1,6 @@
 ---
-title: "Consumer"
+title: "consume"
 date: 2020-12-27T22:09:37+01:00
 draft: false
-geekdocCollapseSection: true
 ---
 asadf asfa sdfasfasf
