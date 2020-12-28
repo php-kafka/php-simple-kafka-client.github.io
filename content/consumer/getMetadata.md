@@ -5,10 +5,14 @@ draft: false
 ---
 ## Description
 ```php
-
+function getMetadata(bool $allTopics, int $timeoutMs, ConsumerTopic $topic = null): Metadata {}
 ```
-asdf
+Get metadata for all topics or a single topic
 ## Example
 ```php
-
+$conf = Kafka\Configuration();
+$conf->set('metadata.broker.list', 'kafka:9092');
+$consumer = new Kafka\Consumer($conf);
+$topicHandle = $consumer->getTopicHandle('test-topic');
+$singleTopicMetadata = $consumer->metadata(true, $topicHandle, 10000);
 ```

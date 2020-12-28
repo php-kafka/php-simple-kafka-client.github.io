@@ -5,10 +5,15 @@ draft: false
 ---
 ## Description
 ```php
-
+public function subscribe(array $topics): void {}
 ```
-asdf
+Subscribe to one or more topics (regexp also supported).  
+Any previous subscription will be unassigned and unsubscribed first.  
+
 ## Example
 ```php
-
+$conf = Kafka\Configuration();
+$conf->set('metadata.broker.list', 'kafka:9092');
+$consumer = new Kafka\Consumer($conf);
+$consumer->subscribe(['test-topic']);
 ```

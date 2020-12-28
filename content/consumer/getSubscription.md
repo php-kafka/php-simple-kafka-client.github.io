@@ -5,10 +5,14 @@ draft: false
 ---
 ## Description
 ```php
-
+public function getSubscription(): array {}
 ```
-asdf
+Return topic names to which the consumer is currently subscribed to
 ## Example
 ```php
-
+$conf = Kafka\Configuration();
+$conf->set('metadata.broker.list', 'kafka:9092');
+$consumer = new Kafka\Consumer($conf);
+$consumer->subscribe(['test-topic']);
+var_dump($consumer->getSubscription());
 ```
