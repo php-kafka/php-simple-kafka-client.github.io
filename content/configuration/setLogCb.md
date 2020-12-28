@@ -8,8 +8,8 @@ geekdocCollapseSection: true
 ```php
 public function setLogCb(callable $callback): void {}
 ```
-Setting a Log callback, you will get events according to the `log_level` you set
-
+Set a log callback  
+You will get events according to the `log_level` setting
 ## Example
 ```php
 $conf = new Kafka\Configuration();
