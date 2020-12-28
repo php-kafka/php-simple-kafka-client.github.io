@@ -13,4 +13,11 @@ Get a producer instance
 $conf = Kafka\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
 $producer = new Kafka\Producer($conf);
+try {
+    $producer->initTransactions(10000);
+} catch (Kafka\KafkaErrorException $e) {
+    if ($e->$transactionRequiresAbort()) {
+        $producer->abortTransaction(10000);
+    }
+}
 ```

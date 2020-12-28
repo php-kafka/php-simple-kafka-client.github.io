@@ -13,4 +13,8 @@ Get a producer instance
 $conf = Kafka\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
 $producer = new Kafka\Producer($conf);
+$producer->initTransactions(10000);
+$producer->beginTransaction();
+// produce some messsages
+$producer->commitTransaction(10000);
 ```

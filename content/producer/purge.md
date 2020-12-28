@@ -13,4 +13,6 @@ Get a producer instance
 $conf = Kafka\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
 $producer = new Kafka\Producer($conf);
+// produce some messsages
+$producer->purge(RD_KAFKA_PURGE_F_QUEUE);
 ```
