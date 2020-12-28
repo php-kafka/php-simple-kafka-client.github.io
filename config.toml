@@ -1,6 +1,6 @@
 baseURL = "https://php-kafka.github.io/"
 languageCode = "en-us"
-title = "Documentation php-kafka"
+title = "Documentation of php-kafka"
 theme = "hugo-geekdoc"
 
 # Geekdoc required configuration
