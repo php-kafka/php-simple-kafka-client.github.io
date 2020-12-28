@@ -19,3 +19,13 @@ Add the following line to your `php.ini` file:
 ```ini
 extension=php_kafka.dll
 ```
+### Manual installation
+```bash
+git clone https://github.com/php-kafka/php-kafka.git
+cd php-kafka
+phpize && ./configure && make -j5 all && make install
+```
+In your `php/conf.d` folder add a `kafka.ini` with the following:
+```ini
+extension=kafka.so
+```
