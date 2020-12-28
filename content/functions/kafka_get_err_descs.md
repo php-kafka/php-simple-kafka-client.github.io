@@ -4,10 +4,12 @@ date: 2020-12-27T22:09:37+01:00
 draft: false
 geekdocCollapseSection: true
 ---
+## Description
 ```php
 function kafka_get_err_descs(): array {}
 ```
-Returns a full list of error codes and their description, see example:
+Returns a full list of error codes and their description
+## Result structure
 ```php
 [
     [
