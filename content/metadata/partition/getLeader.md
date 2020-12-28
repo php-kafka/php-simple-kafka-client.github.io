@@ -16,7 +16,7 @@ $conf->set('auto.offset.reset', 'earliest');
 $producer = new Kafka\Producer($conf);
 $metadata = $producer->getMetadata(false, 10000);
 echo sprintf(
-    'Topic partition error: %d',
+    'Topic partition leader: %d',
     $metadata->getTopics()->current()->getPartitions()->current()->getLeader()
 ) . PHP_EOL;
 ```

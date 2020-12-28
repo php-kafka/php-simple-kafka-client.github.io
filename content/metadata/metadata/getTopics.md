@@ -8,7 +8,7 @@ geekdocCollapseSection: true
 ```php
 public function getTopics(): Metadata\Collection {}
 ```
-Get metadata of all topics (or a single topic if one was provided)
+Get metadata of all topics (or a single topic if one was provided)  
 Will return a `Metadata\Collection` of `Metadata\Topic`
 ## Example
 ```php

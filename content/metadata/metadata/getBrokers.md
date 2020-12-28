@@ -8,7 +8,7 @@ geekdocCollapseSection: true
 ```php
 public function getBrokers(): Metadata\Collection {}
 ```
-Get metadata of all brokers
+Get metadata of all brokers  
 Will return a `Metadata\Collection` of `Metadata\Broker`
 ## Example
 ```php

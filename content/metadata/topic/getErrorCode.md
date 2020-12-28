@@ -15,5 +15,5 @@ $conf = new Kafka\Configuration();
 $conf->set('auto.offset.reset', 'earliest');
 $producer = new Kafka\Producer($conf);
 $metadata = $producer->getMetadata(false, 10000);
-echo sprintf('Topic error: %d', $metadata->getTopics()->current()->getErrorCode()) . PHP_EOL;
+echo sprintf('Topic error code: %d', $metadata->getTopics()->current()->getErrorCode()) . PHP_EOL;
 ```
