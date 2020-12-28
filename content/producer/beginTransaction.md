@@ -7,8 +7,12 @@ draft: false
 ```php
 public function beginTransaction(): void {}
 ```
-Get a producer instance
-## Example
+`Kafka\Producer::initTransactions()` must have been called successfully (once)  
+before this function is called. Any messages produced, offsets sent, etc,  
+after the successful return of this function will be part of the transaction  
+and committed or aborted automatically.  
+Finish the transaction by calling `Kafka\Producer::commitTransaction()`  
+or abort the transaction by calling `Kafka\Producer::abortTransaction()`
 ```php
 $conf = Kafka\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');

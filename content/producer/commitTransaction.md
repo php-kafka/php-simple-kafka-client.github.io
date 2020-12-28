@@ -7,7 +7,12 @@ draft: false
 ```php
 public function commitTransaction(int $timeoutMs): void {}
 ```
-Get a producer instance
+Commit the current transaction (as started with `Kafka\Producer::beginTransaction()`).  
+Any outstanding messages will be flushed (delivered) before actually committing the transaction.  
+If any of the outstanding messages fail permanently the current transaction will enter the  
+abortable error state and this function will return an abortable error, in this case the  
+application must call `Kafka\Producer::abortTransaction()` before attempting a new  
+transaction with `Kafka\Producer::beginTransaction()`.
 ## Example
 ```php
 $conf = Kafka\Configuration();

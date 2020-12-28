@@ -7,7 +7,12 @@ draft: false
 ```php
 public function initTransactions(int $timeoutMs): void  {}
 ```
-Get a producer instance
+Initialize transactions for the producer instance.  
+This function ensures any transactions initiated by previous instances of  
+the producer with the same `transactional.id` are completed.  
+If the previous instance failed with a transaction in progress the previous  
+transaction will be aborted. This function needs to be called before any other  
+transactional or produce functions are called when the `transactional.id` is configured.
 ## Example
 ```php
 $conf = Kafka\Configuration();
