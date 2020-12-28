@@ -17,5 +17,5 @@ $conf = Kafka\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
 $consumer = new Kafka\Consumer($conf);
 $topicPartition = new TopicPartition('test-topic', 0, strtotime("-1 week"));
-$consumer->queryWatermarkOffsets('test-topic, 0, int &$low, int &$high, 10000);
+$consumer->queryWatermarkOffsets('test-topic', 0, int &$low, int &$high, 10000);
 ```
