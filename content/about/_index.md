@@ -10,4 +10,5 @@ draft: false
 [![License: BSD-3](https://img.shields.io/badge/License-BSD--3-green.svg)](https://github.com/php-kafka/php-kafka/blob/main/LICENSE)
 
 This extension provides ways to interact with Apache Kafka.  
-It uses [librdkafka](https://github.com/edenhill/librdkafka) for binding and was inspired by [php-rdkafka](https://github.com/arnaud-lb/php-rdkafka).  
+You can find some examples for producer and consumer [here](https://github.com/php-kafka/php-kafka-examples/tree/main/src/ext-php-kafka)  
+This extension uses [librdkafka](https://github.com/edenhill/librdkafka) for binding and was inspired by [php-rdkafka](https://github.com/arnaud-lb/php-rdkafka).  
