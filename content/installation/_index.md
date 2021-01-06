@@ -6,7 +6,6 @@ draft: false
 ## Installation with PECL
 Not yet support (WIP)
 
-```
 ### Manual installation
 ```bash
 git clone https://github.com/php-kafka/php-kafka.git
