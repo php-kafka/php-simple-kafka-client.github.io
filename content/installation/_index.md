@@ -5,12 +5,14 @@ draft: false
 ---
 ## Installation with PECL
 ### Linux
+
 ```bash
-sudo pecl install kafka
+sudo apt install librdkafka-dev
+sudo pecl install rdkafka
 ```
 In your `php/conf.d` folder add a `kafka.ini` with the following:
 ```ini
-extension=kafka.so
+extension=rdkafka.so
 ```
 ### Windows
 Download DLLs from PECL and  put `librdkafka.dll` in the root PHP directory (same level as `php.exe`)  
