@@ -8,3 +8,9 @@ The documentation is built with [Hugo](https://gohugo.io/documentation/).
  Clone this repository and make the necessary changes
 ```bash
 git@github.com:php-kafka/php-kafka.github.io.git
+```
+Run the Hugo docker image to verify your changes
+```bash
+docker-compose up 
+```
+Visit `http://localhost:1313` in your browser.
