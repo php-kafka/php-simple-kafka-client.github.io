@@ -5,6 +5,6 @@ The documentation is built with [Hugo](https://gohugo.io/documentation/).
 
 
 # Contributing
- Clone this repository.
+ Clone this repository and make the necessary changes
 ```bash
 git@github.com:php-kafka/php-kafka.github.io.git
