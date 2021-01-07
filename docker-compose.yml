@@ -1,8 +1,11 @@
-version: '3.8'
+version: "3.8"
 services:
   hugo:
     image: klakegg/hugo:latest
     container_name: hugo
     hostname: hugo
+    command: server
     volumes:
       - ./:/src
+    ports:
+      - "1313:1313"
