@@ -8,8 +8,8 @@ Not yet support (WIP)
 
 ### Manual installation
 ```bash
-git clone https://github.com/php-kafka/php-kafka.git
-cd php-kafka
+git clone https://github.com/php-kafka/php-simple-kafka-client.git
+cd php-simple-kafka-client
 phpize && ./configure && make -j5 all && make install
 ```
 In your `php/conf.d` folder add a `kafka.ini` with the following:
