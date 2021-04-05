@@ -1,6 +1,6 @@
 baseURL = "https://php-kafka.github.io/"
 languageCode = "en-us"
-title = "Documentation of php-kafka"
+title = "Documentation of php-simple-kafka-client"
 theme = "hugo-geekdoc"
 
 # Geekdoc required configuration
@@ -11,6 +11,6 @@ disablePathToLower = true
 [params]
     geekdocLogo = "images/logo.jpg"
     geekdocBreadcrumb = false
-    geekdocRepo = "https://github.com/php-kafka/php-kafka.github.io"
+    geekdocRepo = "https://github.com/php-kafka/php-simple-kafka-client.github.io"
     geekdocEditPath = "tree/main/content"
     geekdocSearch = false
