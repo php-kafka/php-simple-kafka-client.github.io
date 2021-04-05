@@ -1,6 +1,6 @@
 # Documentation of php-kafka
 This is the documentation repository of [php-kafka/php-simple-kafka-client](https://github.com/php-kafka/php-simple-kafka-client).  
-See the live documentation at [https://php-simple-kafka-client.github.io](https://php-simple-kafka-client.github.io).  
+See the live documentation at [https://php-kafka.github.io/php-simple-kafka-client.github.io/](https://php-kafka.github.io/php-simple-kafka-client.github.io/).  
 The documentation is built with [Hugo](https://gohugo.io/documentation/).
 
 
