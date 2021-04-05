@@ -1,13 +1,13 @@
 # Documentation of php-kafka
-This is the documentation repository of [php-kafka/php-kafka](https://github.com/php-kafka/php-kafka).  
-See the live documentation at [https://php-kafka.github.io](https://php-kafka.github.io).  
+This is the documentation repository of [php-kafka/php-kafka](https://github.com/php-kafka/php-simple-kafka-client).  
+See the live documentation at [https://php-kafka.github.io](https://php-simple-kafka-client.github.io).  
 The documentation is built with [Hugo](https://gohugo.io/documentation/).
 
 
 # Contributing
  Clone this repository and make the necessary changes
 ```bash
-git@github.com:php-kafka/php-kafka.github.io.git
+git@github.com:php-kafka/php-simple-kafka-client.github.io.git
 ```
 Run the Hugo docker image to verify your changes
 ```bash
