@@ -11,6 +11,6 @@ public function getPartition(): int {}
 Get partition of topic partition
 ## Example
 ```php
-$topicPartition = new Kafka\TopicPartiton('test-topic', 0, 100);
+$topicPartition = new SimpleKafkaClient\TopicPartiton('test-topic', 0, 100);
 echo sprintf('TopicPartition partition %d', $topicPartition->getPartition()) . PHP_EOL;
 ```

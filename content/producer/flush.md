@@ -14,9 +14,9 @@ all queued and in-flight produce requests are completed before terminating.
 This function will call poll() and thus trigger callbacks.
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 // produce some messsages
 $producer->flush(10000);
 ```

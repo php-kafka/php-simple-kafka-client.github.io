@@ -11,5 +11,5 @@ public function __construct(string $topicName, int $partition, int $offset = 0) 
 Create new topic partition instance
 ## Example
 ```php
-$topicPartition = new Kafka\TopicPartiton('test-topic', 0);
+$topicPartition = new SimpleKafkaClient\TopicPartiton('test-topic', 0);
 ```

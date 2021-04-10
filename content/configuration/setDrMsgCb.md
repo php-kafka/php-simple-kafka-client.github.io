@@ -14,7 +14,7 @@ the message was succesfully delivered or permanently failed delivery
 
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->setDrMsgCb(
     function (Producer $kafka, Message $message) {
         if (RD_KAFKA_RESP_ERR_NO_ERROR !== $message->err) {

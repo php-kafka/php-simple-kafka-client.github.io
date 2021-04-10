@@ -10,12 +10,12 @@ public function isRetriable(): bool {}
 Indicates that the operation that caused this exception can be retried.
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 try {
     $producer->initTransactions(10000);
-} catch (Kafka\KafkaErrorException $e) {
+} catch (SimpleKafkaClient\KafkaErrorException $e) {
     if ($e->isRetriable()) {
         // action can be retried
     }

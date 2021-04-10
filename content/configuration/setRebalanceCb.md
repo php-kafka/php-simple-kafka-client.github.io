@@ -19,9 +19,9 @@ to the application's callback.
 
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->setRebalanceCb(
-    function (Kafka\Consumer $kafka, int $errorCode, array $partitions = null) {
+    function (SimpleKafkaClient\Consumer $kafka, int $errorCode, array $partitions = null) {
         case RD_KAFKA_RESP_ERR__ASSIGN_PARTITIONS:
             $kafka->assign($partitions);
             break;

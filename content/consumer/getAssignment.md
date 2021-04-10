@@ -10,13 +10,13 @@ public function getAssignment(): array {}
 Returns the current partition assignment
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$consumer = new Kafka\Consumer($conf);
+$consumer = new SimpleKafkaClient\Consumer($conf);
 $consumer->assign(
     [
-        new Kafka\TopicPartition('test-topic', 1, 3000),
-        new Kafka\TopicPartition('test-topic', 2, 3009)
+        new SimpleKafkaClient\TopicPartition('test-topic', 1, 3000),
+        new SimpleKafkaClient\TopicPartition('test-topic', 2, 3009)
     ]
 );
 var_dump($consumer->getAssignment());

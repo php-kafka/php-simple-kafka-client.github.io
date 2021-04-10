@@ -11,9 +11,9 @@ public function getOrigBrokerId(): int {}
 Get broker id originating this metadata
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->set('auto.offset.reset', 'earliest');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 $metadata = $producer->getMetadata(false, 10000);
 echo sprintf('Broker id: %d', $metadata->getOrigBrokerId()) . PHP_EOL;
 ```

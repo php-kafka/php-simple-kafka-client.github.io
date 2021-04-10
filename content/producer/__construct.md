@@ -10,7 +10,7 @@ public function __construct(Configuration $configuration) {}
 Get a producer instance
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 ```

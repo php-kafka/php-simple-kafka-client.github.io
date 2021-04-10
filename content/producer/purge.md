@@ -19,9 +19,9 @@ to or from the broker will fail with the error code set to `RD_KAFKA_RESP_ERR__P
 - `RD_KAFKA_PURGE_F_NON_BLOCKING` make the call non-blocking
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 // produce some messsages
 $producer->purge(RD_KAFKA_PURGE_F_QUEUE);
 ```

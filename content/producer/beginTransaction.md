@@ -7,16 +7,16 @@ draft: false
 ```php
 public function beginTransaction(): void {}
 ```
-`Kafka\Producer::initTransactions()` must have been called successfully (once)  
+`SimpleKafkaClient\Producer::initTransactions()` must have been called successfully (once)  
 before this function is called. Any messages produced, offsets sent, etc,  
 after the successful return of this function will be part of the transaction  
 and committed or aborted automatically.  
-Finish the transaction by calling `Kafka\Producer::commitTransaction()`  
-or abort the transaction by calling `Kafka\Producer::abortTransaction()`
+Finish the transaction by calling `SimpleKafkaClient\Producer::commitTransaction()`  
+or abort the transaction by calling `SimpleKafkaClient\Producer::abortTransaction()`
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 $producer->initTransactions(10000);
 $producer->beginTransaction();
 // produce some messsages

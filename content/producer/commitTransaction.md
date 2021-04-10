@@ -7,17 +7,17 @@ draft: false
 ```php
 public function commitTransaction(int $timeoutMs): void {}
 ```
-Commit the current transaction (as started with `Kafka\Producer::beginTransaction()`).  
+Commit the current transaction (as started with `SimpleKafkaClient\Producer::beginTransaction()`).  
 Any outstanding messages will be flushed (delivered) before actually committing the transaction.  
 If any of the outstanding messages fail permanently the current transaction will enter the  
 abortable error state and this function will return an abortable error, in this case the  
-application must call `Kafka\Producer::abortTransaction()` before attempting a new  
-transaction with `Kafka\Producer::beginTransaction()`.
+application must call `SimpleKafkaClient\Producer::abortTransaction()` before attempting a new  
+transaction with `SimpleKafkaClient\Producer::beginTransaction()`.
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 $producer->initTransactions(10000);
 $producer->beginTransaction();
 // produce some messsages

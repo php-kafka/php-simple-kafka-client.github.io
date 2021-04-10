@@ -11,6 +11,6 @@ public function setPartition(int $partition): TopicPartition {}
 Set partition of topic partition
 ## Example
 ```php
-$topicPartition = new Kafka\TopicPartiton('test-topic', 0);
+$topicPartition = new SimpleKafkaClient\TopicPartiton('test-topic', 0);
 $topicPartition->setPartition(1);
 ```

@@ -11,9 +11,9 @@ public function getPort(): int {}
 Get host port of metadata broker
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->set('auto.offset.reset', 'earliest');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 $metadata = $producer->getMetadata(false, 10000);
 echo sprintf('Broker port: %d', $metadata->getBrokers()->current()->getPort()) . PHP_EOL;
 ```

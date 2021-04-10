@@ -12,8 +12,8 @@ the consumer has revoked its assignment, calling the rebalance callback
 if it is configured, committed offsets to broker, and left the consumer group. The maximum blocking time is roughly limited to session.timeout.ms.
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$consumer = new Kafka\Consumer($conf);
+$consumer = new SimpleKafkaClient\Consumer($conf);
 $consumer->close();
 ```
