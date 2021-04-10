@@ -11,6 +11,6 @@ public function getOffset(): int {}
 Get offset of topic partition
 ## Example
 ```php
-$topicPartition = new Kafka\TopicPartiton('test-topic', 0, 100);
+$topicPartition = new SimpleKafkaClient\TopicPartiton('test-topic', 0, 100);
 echo sprintf('TopicPartition offset %d', $topicPartition->getOffset()) . PHP_EOL;
 ```

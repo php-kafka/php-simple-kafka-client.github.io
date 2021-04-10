@@ -11,9 +11,9 @@ Unsubscribe from the current subscriptions
 
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$consumer = new Kafka\Consumer($conf);
+$consumer = new SimpleKafkaClient\Consumer($conf);
 $consumer->subscribe(['test-topic']);
 $consumer->unsubscribe();
 ```

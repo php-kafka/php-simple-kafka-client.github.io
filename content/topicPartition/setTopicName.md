@@ -11,6 +11,6 @@ public function setTopicName(string $topicName): TopicPartition {}
 Set topic name of topic partition
 ## Example
 ```php
-$topicPartition = new Kafka\TopicPartiton('test-topic', 0);
+$topicPartition = new SimpleKafkaClient\TopicPartiton('test-topic', 0);
 $topicPartition->setTopicName('another-test-topic');
 ```

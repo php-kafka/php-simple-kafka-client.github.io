@@ -11,13 +11,13 @@ Atomic assignment of partitions to consume.
 The new `partitions` will replace the existing assignment.
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$consumer = new Kafka\Consumer($conf);
+$consumer = new SimpleKafkaClient\Consumer($conf);
 $consumer->assign(
     [
-        new Kafka\TopicPartition('test-topic', 1, 3000),
-        new Kafka\TopicPartition('test-topic', 2, 3009)
+        new SimpleKafkaClient\TopicPartition('test-topic', 1, 3000),
+        new SimpleKafkaClient\TopicPartition('test-topic', 2, 3009)
     ]
 );
 ```

@@ -10,9 +10,9 @@ public function getCommittedOffsets(array $topics, int $timeoutMs): array {}
 Returns the committed offsets for topics and partitions for a consumer group
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$consumer = new Kafka\Consumer($conf);
+$consumer = new SimpleKafkaClient\Consumer($conf);
 $topicPartition = new TopicPartition('test-topic', 0);
 var_dump($consumer->getCommittedOffsets([$topicPartition], 10000));
 ```

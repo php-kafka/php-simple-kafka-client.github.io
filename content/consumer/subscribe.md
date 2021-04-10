@@ -12,8 +12,8 @@ Any previous subscription will be unassigned and unsubscribed first.
 
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$consumer = new Kafka\Consumer($conf);
+$consumer = new SimpleKafkaClient\Consumer($conf);
 $consumer->subscribe(['test-topic']);
 ```

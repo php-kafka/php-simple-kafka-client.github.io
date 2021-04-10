@@ -12,9 +12,9 @@ Set a log callback
 You will get events according to the `log_level` setting
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->setLogCb(
-    function (Kafka\Kafka $kafka, int $level, string $facility, string $message) {
+    function (SimpleKafkaClient\Kafka $kafka, int $level, string $facility, string $message) {
         //do something
     }
 );

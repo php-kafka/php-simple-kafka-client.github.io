@@ -15,12 +15,12 @@ transaction will be aborted. This function needs to be called before any other
 transactional or produce functions are called when the `transactional.id` is configured.
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 try {
     $producer->initTransactions(10000);
-} catch (Kafka\KafkaErrorException $e) {
+} catch (SimpleKafkaClient\KafkaErrorException $e) {
     if ($e->$transactionRequiresAbort()) {
         $producer->abortTransaction(10000);
     }

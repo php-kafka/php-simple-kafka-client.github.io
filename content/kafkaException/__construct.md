@@ -17,7 +17,7 @@ public function __construct(
 Create new `KafkaErrorException`, this can be helpful for transaction tests
 ## Example
 ```php
-throw new Kafka\KafkaErrorException(
+throw new SimpleKafkaClient\KafkaErrorException(
     'Some error message',
     88,
     'This is a detailed error string',

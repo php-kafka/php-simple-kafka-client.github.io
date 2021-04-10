@@ -13,9 +13,9 @@ timestamp is greater than or equal to the given timestamp in the
 corresponding partition.
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 $topicPartition = new TopicPartition('test-topic', 0, strtotime("-1 week"));
 $offsetsOneWeekAgo = $producer->offsetForTimes([$topicPartition], 10000);
 ```

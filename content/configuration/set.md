@@ -12,6 +12,6 @@ Set a configuration value
 
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->set('auto.offset.reset', 'earliest');
 ```

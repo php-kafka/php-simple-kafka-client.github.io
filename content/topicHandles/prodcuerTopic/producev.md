@@ -23,9 +23,9 @@ msgflags: `0` or `RD_KAFKA_MSG_F_BLOCK` to block the producer if the queue is fu
 key: message key, if non-null the topic partitioner will calculate the partition according to the key  
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->set('auto.offset.reset', 'earliest');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 $producerTopic = $producer->getTopicHandle('test-topic');
 $producerTopic->produce(
     RD_KAFKA_PARTITION_UA,

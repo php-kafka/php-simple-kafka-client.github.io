@@ -11,6 +11,6 @@ public function getTopicName(): string {}
 Get topic name of topic partition
 ## Example
 ```php
-$topicPartition = new Kafka\TopicPartiton('test-topic', 0, 100);
+$topicPartition = new SimpleKafkaClient\TopicPartiton('test-topic', 0, 100);
 echo sprintf('Topic partition name %s', $topicPartition->getTopicName()) . PHP_EOL;
 ```

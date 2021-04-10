@@ -11,9 +11,9 @@ public function getName(): string {}
 Topic name reported by broker
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->set('auto.offset.reset', 'earliest');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 $metadata = $producer->getMetadata(false, 10000);
 echo sprintf('Topic name: %d', $metadata->getTopics()->current()->getName()) . PHP_EOL;
 ```

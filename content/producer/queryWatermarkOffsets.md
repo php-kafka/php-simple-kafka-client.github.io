@@ -13,9 +13,9 @@ Query broker for low (oldest) and high (newest) offsets for a partition
 $low = 0;
 $high = 0;
 
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 $topicPartition = new TopicPartition('test-topic', 0, strtotime("-1 week"));
 $producer->queryWatermarkOffsets('test-topic', 0, int &$low, int &$high, 10000);
 ```

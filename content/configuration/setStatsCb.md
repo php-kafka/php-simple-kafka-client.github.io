@@ -12,9 +12,9 @@ Set a statistics callback
 The statistics callback is triggered every `statistics.interval.ms` (needs to be configured separately).
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->setStatsCb(
-    function (Kafka\Kafka $kafka, string $json, int $jsonLength) {
+    function (SimpleKafkaClient\Kafka $kafka, string $json, int $jsonLength) {
         //do something
     }
 );

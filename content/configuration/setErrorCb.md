@@ -13,9 +13,9 @@ that non-critical errors will be retried by `libdrkafka`
 
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->setErrorCb(
-    function (Kafka\Kafka $kafka, $errorCode, $reason) {
+    function (SimpleKafkaClient\Kafka $kafka, $errorCode, $reason) {
         //do something
     }
 );

@@ -12,9 +12,9 @@ Registered callbacks will be automaically called `rebalanceCallback`, `logCallba
 On error `$message->err` will not be `RD_KAFKA_ERR_NO_ERROR` but contain the acutal error code.
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$consumer = new Kafka\Consumer($conf);
+$consumer = new SimpleKafkaClient\Consumer($conf);
 $message = $consumer->consume(20000);
 ```
 {{< hint info >}}

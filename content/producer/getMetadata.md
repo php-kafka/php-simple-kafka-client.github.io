@@ -10,9 +10,9 @@ function getMetadata(bool $allTopics, int $timeoutMs, ConsumerTopic $topic = nul
 Get metadata for all topics or a single topic
 ## Example
 ```php
-$conf = Kafka\Configuration();
+$conf = SimpleKafkaClient\Configuration();
 $conf->set('metadata.broker.list', 'kafka:9092');
-$producer = new Kafka\Producer($conf);
+$producer = new SimpleKafkaClient\Producer($conf);
 $topicHandle = $producer->getTopicHandle('test-topic');
 $singleTopicMetadata = $producer->metadata(true, $topicHandle, 10000);
 ```

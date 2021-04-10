@@ -11,9 +11,9 @@ public function getName(): string {}
 Get topic name
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->set('auto.offset.reset', 'earliest');
-$consumer = new Kafka\Consumer($conf);
+$consumer = new SimpleKafkaClient\Consumer($conf);
 $consumerTopic = $consumer->getTopicHandle('test-topic');
 echo sprintf('Topic name: %s', $consumerTopic->getName()) . PHP_EOL;
 ```

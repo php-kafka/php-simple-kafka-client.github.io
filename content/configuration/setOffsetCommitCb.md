@@ -15,9 +15,9 @@ this callback will be called with `err == RD_KAFKA_RESP_ERR__NO_OFFSET`
 which is not to be considered an error.
 ## Example
 ```php
-$conf = new Kafka\Configuration();
+$conf = new SimpleKafkaClient\Configuration();
 $conf->setOffsetCommitCb(
-    function (Kafka\Kafka $kafka, int $errorCode, array $topicPartition) {
+    function (SimpleKafkaClient\Kafka $kafka, int $errorCode, array $topicPartition) {
         if (RD_KAFKA_RESP_ERR_NO_ERROR === $errorCode) {
             echo 'Commit was successful';
         } else {
