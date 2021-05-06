@@ -8,7 +8,17 @@ draft: false
 pecl install simple_kafka_client
 ```
 
-### Manual installation
+## Alpine Linux
+For PHP7:
+```shell
+apk add php7-pecl-simple-kafka-client --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/
+```
+For PHP8:
+```shell
+apk add php8-pecl-simple-kafka-client --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/
+```
+
+## Manual installation
 ```bash
 git clone https://github.com/php-kafka/php-simple-kafka-client.git
 cd php-simple-kafka-client
