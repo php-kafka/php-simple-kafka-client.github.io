@@ -13,4 +13,4 @@ Run the Hugo docker image to verify your changes
 ```bash
 docker-compose up 
 ```
-Visit `http://localhost:1313/php-simple-kafka-client.github.io7` in your browser.
+Visit `http://localhost:1313/php-simple-kafka-client.github.io/` in your browser.
