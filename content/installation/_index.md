@@ -18,6 +18,15 @@ For PHP8:
 apk add php8-pecl-simple-kafka-client --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/
 ```
 
+## Windows
+You can find the DLLs on PECL as well. If you experience an error similar to this:
+```
+The procedure entry point rd_kafka_abort_transaction could not be located in the dynamic library librdkafka.dll
+```
+This can happen if an old version of `librdkafka.dll` is packaged during the PECL build.  
+You can download newer versions of the `librdkafka.dll` [here](https://www.nuget.org/packages/librdkafka.redist)  
+You can find the DLLs in the `runtimes` sub-folder.
+
 ## Manual installation
 ```bash
 git clone https://github.com/php-kafka/php-simple-kafka-client.git
