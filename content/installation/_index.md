@@ -23,7 +23,9 @@ You can find the DLLs on PECL as well. If you experience an error similar to thi
 ```
 The procedure entry point rd_kafka_abort_transaction could not be located in the dynamic library librdkafka.dll
 ```
-This can happen if an old version of `librdkafka.dll` is packaged during the PECL build.  
+1. Most likely you have an outdated version of `librdkaka` in use. Note that `librdkaka.dll` needs to be in the `PATH`.  
+putting it in the ext/ directory does not make it available. Be sure to overwrite any previous versions.
+2. This can also happen if an old version of `librdkafka.dll` is packaged during the PECL build.  
 You can download newer versions of the `librdkafka.dll` [here](https://www.nuget.org/packages/librdkafka.redist)  
 You can find the DLLs in the `runtimes` sub-folder.
 
