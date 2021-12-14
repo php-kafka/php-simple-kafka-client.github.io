@@ -14,3 +14,4 @@ This extension provides ways to interact with Apache Kafka.
 It also supports any system that is Kafka API compatible like Redpanda.  
 You can find some examples for producer and consumer [here](https://github.com/php-kafka/php-kafka-examples/tree/main/src/ext-php-simple-kafka-client)  
 This extension uses [librdkafka](https://github.com/edenhill/librdkafka) for binding and was inspired by [php-rdkafka](https://github.com/arnaud-lb/php-rdkafka).  
+**Notice:** php-rdkafka conflicts with this extension, please uninstall it first if you want to use simple-kafka-client.
