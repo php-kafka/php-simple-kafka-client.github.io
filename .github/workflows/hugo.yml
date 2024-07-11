@@ -27,7 +27,7 @@ jobs:
         run: hugo --minify
 
       # Fix SSH configuration of the container
-      - run: ./fix_ssh.sh
+      - run: ./fixSSH.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
