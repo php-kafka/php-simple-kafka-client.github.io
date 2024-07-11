@@ -1,11 +1,13 @@
 name: github pages
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
 
 permissions:
+  contents: write
   pages: write
   id-token: write
 
@@ -26,9 +28,6 @@ jobs:
 
       - name: Build
         run: hugo --minify
-
-      - name: Fix ssh
-        run: ./fixSSH.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
