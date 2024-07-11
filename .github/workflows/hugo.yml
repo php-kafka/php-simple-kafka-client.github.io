@@ -27,6 +27,8 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      -run: ./fixSSH.sh
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
